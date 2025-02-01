@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Bona+Nova+SC:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/moment.min.js"></script>
+
+    <style>
+        body {
+            background: linear-gradient(135deg, rgba(206, 25, 25, 0.2), rgba(255,255,255,0));
+            backdrop-filter: blur(10px);
+            
+        }
+        .w3-Leckerli-one {
+            font-family: "Leckerli One", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .w3-bona {
+            font-family: "Bona Nova SC", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .w3-bona-bold {
+            font-family: "Bona Nova SC", serif;
+            font-weight: 700;
+            font-style: normal;
+        }
+        .w3-alex {
+            font-family: "Alex Brush", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .kepala {
+            background: radial-gradient(circle,rgba(255,255,255, 0.5), rgba(247, 133, 177, 0.7));
+        }
+        .isi {
+            background: radial-gradient(circle, rgba(255, 209, 220, 0.7), rgba(170, 51, 106));
+        }
+        section div {
+            width: 33.3%;
+        }
+        p span {
+            font-size: 1.4em;
+        }
+        .galeri {
+            width: 33.3vw;
+            
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            
+        }
+        .galeri img {
+            width: 100%;
+            height: 100%;
+            flex: 1;
+            object-fit: cover;
+            
+        }
+        .garis {
+            background: linear-gradient(to left, rgba(255, 105, 180), rgba(219, 112, 147, 0.5));
+            backdrop-filter: blur(5px);
+            height: 3px;
+            border: none;
+        }
+
+        .countdown-wrapper {
+            text-align: center;
+            margin-top: 50px;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+            margin-top: 20px;
+            width: 100%;
+        }
+        .kaki {
+            background: radial-gradient(circle, rgb(255, 209, 220), rgb(252, 108, 133));
+            
+        }
+        .hover-tombol:hover{
+            background-color: rgb(169, 64, 100);
+        }
+
+        .countdown div {
+            margin: 0 10px;
+            background-color: rgba(251, 198, 207, 0.4);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .countdown span {
+            display: block;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .countdown-time {
+            font-size: 1.5em;
+            background: linear-gradient(to bottom, rgba(138, 0, 0, 0.5), rgba(220, 20, 60));
+        }
+        
+        /* Animasi efek countdown */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .countdown div {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @media only screen and (max-width: 600px){
+            .countdown span {
+                font-size: 20px;
+            }
+            .countdown-time {
+                font-size: 20px;
+            }
+            .countdown div{
+                margin: 0 5px;
+            }
+            .judul div h3{
+                font-size: 1.4em;
+            }
+            .isi .w3-col {
+                width: 100%;
+                height: auto;
+            }
+            .kaki .w3-col {
+                width: 100%;
+                height: auto;
+            }
+            .kaki .dua {
+                background: linear-gradient(to top, rgba(255, 105, 180), rgba(219, 112, 147, 0.8));
+                box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.5);
+            }
+        }
+    </style>
+</head>
+<body class="w3-container w3-center">
+    <div class="w3-card-4">
+        <header class="kepala w3-display-container w3-card-4 w3-center" style="height: 650px;">
+            <div class="judul w3-display-middle">
+                <h3 class="w3-xxxlarge w3-alex">Selamat Datang</h3>
+                <h1 class="w3-Leckerli-one w3-jumbo">SINTA & RONI</h1>
+                <p class="w3-xlarge w3-bona">Sabtu, 1 juni 2025</p>
+                <div class="countdown-wrapper">
+                    <h3 class="w3-bona">Waktu yang tersisa hingga hari bahagia kami!</h3>
+            
+                    <div class="countdown">
+                        <div>
+                            <div class="countdown-time" id="days"></div>
+                            <span>Hari</span>
+                        </div>
+                        <div>
+                            <div class="countdown-time" id="hours"></div>
+                            <span>Jam</span>
+                        </div>
+                        <div>
+                            <div class="countdown-time" id="minutes"></div>
+                            <span>Menit</span>
+                        </div>
+                        <div>
+                            <div class="countdown-time" id="seconds"></div>
+                            <span>Detik</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="isi w3-card-4 w3-row w3-mobile " style="height: auto;">
+            <div class="satu w3-display-container w3-container w3-col s4 w3-mobile w3-card-2 " style="height: 1248px;">
+                <div class="w3-card-2 w3-display-middle" style="width: 80%;">
+                    <h2 class="w3-bona-bold w3-text-nowrap w3-xxlarge">Susunan Acara</h2>
+                    <p><span>08.00-09.00</span><br> Penyambutan tamu & Persiapan pengantin</p><hr class="garis">
+                    <p><span>09.00-09.30</span><br> Akad nikah</p><hr class="garis">
+                    <p><span>09.30-10.30</span><br> Penyiraman pengantin</p><hr class="garis">
+                    <p><span>10.30-Selesai</span><br>Acara resepsi</p>
+                </div>
+            </div>
+            <div class="w3-col s4 w3-mobile w3-card-2 galeri">
+                <img src="foto/gmbr1.jpg" alt="1" >
+                <img src="foto/gmbr2.jpg" alt="2" >
+            </div>
+            <div class="w3-container w3-col s4 w3-mobile w3-card-2 w3-display-container" style="height: 1248px;">
+                <div class="w3-display-middle" style="width: 90%; margin-left: 50px;">
+                    <div class="w3-card-4" style="width: 80%;">
+                        <img src="foto/wanita.jfif" alt="mempelai wanita" style="width: 100%;">
+                        <h3 class="w3-bona-bold">Sinta maharani</h3><hr class="garis">
+                        <p class="w3-bona w3-padding w3-large">Anak Bapak Sholeh & Ibu Ratih</p>
+                    </div>
+                    <div class="w3-card-4" style="width: 80%; margin-top: 70px;">
+                        <img src="foto/pria.jfif" alt="mempelai pria" style="width: 100%;">
+                        <h3 class="w3-bona-bold">Roni cahyano</h3><hr class="garis">
+                        <p class="w3-bona w3-padding w3-large">Anak Bapak Jami & Ibu Kiki</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="kaki w3-card-4 w3-row w3-mobile" style="height: 650px;">
+            <div class="w3-display-container w3-col s6 w3-mobile w3-card-2 w3-container" style="height: 650px;">
+                <div class="w3-display-middle">
+                    <h2 class="w3-bona-bold">Lokasi Hajat</h2><hr class="garis">
+                    <div class="w3-card-2">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3961.300310260793!2d107.54332838054594!3d-6.854561899999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sid!2sid!4v1738291064692!5m2!1sid!2sid" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <h4 class="w3-bona-bold w3-xlarge">Atau</h4>
+                        <a href="https://maps.app.goo.gl/Sghe8kVsKK1E4uREA" class="w3-button w3-card-2 w3-margin w3-bona w3-hover-pink" target="_blank">Klik disini</a>
+                    </div>
+                </div>
+            </div>
+            <div class="dua w3-display-container w3-col s6 w3-mobile w3-card-2 w3-container" style="height: 650px;">
+                <div class="w3-display-middle" style="width: 80%;">
+                    <div class="w3-card-2">
+                        <h5 class="w3-xxlarge w3-bona-bold">Silahkan verifikasi kehadiran</h5><hr class="garis">
+                        <a href="https://forms.gle/yspDwVdj6nUicequ6" target="_blank" class="w3-button w3-card-2 w3-hover-pink w3-margin">Klik disini</a>
+                    </div>
+                    <h1 class="w3-alex w3-margin w3-jumbo"><b>Terima Kasih</b></h1>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function updateCountdown() {
+            const weddingDate = moment('2025-06-01 08:00:00'); // Tanggal dan jam pernikahan
+            const now = moment();
+            const duration = moment.duration(weddingDate.diff(now));
+
+            document.getElementById('days').textContent = duration.days();
+            document.getElementById('hours').textContent = duration.hours();
+            document.getElementById('minutes').textContent = duration.minutes();
+            document.getElementById('seconds').textContent = duration.seconds();
+
+            // Update setiap detik
+            setTimeout(updateCountdown, 1000);
+        }
+
+        updateCountdown();
+    </script>
+</body>
+</html>
