@@ -123,6 +123,9 @@
         }
 
         @media only screen and (max-width: 600px){
+            .countdown {
+                white-space: wrap;
+            }
             .countdown span {
                 font-size: 20px;
             }
@@ -147,11 +150,64 @@
                 background: linear-gradient(to top, rgba(255, 105, 180), rgba(219, 112, 147, 0.8));
                 box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.5);
             }
+            
         }
+        @media only screen and (max-width: 450px){
+            .countdown {
+                flex-direction: column;
+                margin: unset;
+                margin-bottom: 30px;
+            }
+            .countdown-wrapper h3 {
+                display: none;
+            }
+            .countdown span {
+                font-size: 12px;
+            }
+            .countdown-time {
+                font-size: 10px;
+                
+            }
+            .countdown div {
+                margin: 0 2px;
+                padding: 10px;
+                box-shadow: unset;
+            }
+            .calon {
+                width: 100%;
+            }
+            body div {
+                width: 100%;
+                
+            }
+            .kepala {
+                width: 100%;
+                
+            }
+            .isi .satu {
+                height: auto;
+            }
+
+            .kaki div div div h4, br , iframe {
+                display: none;
+            }
+            section div .calon {
+                display: flex;
+                flex-direction: column;
+                
+            }
+            .kepala div h3 {
+                display: none;
+            }
+            .isi div .susunan {
+                padding: 10px;
+            }
+        }
+
     </style>
 </head>
 <body class="w3-container w3-center">
-    <div class="w3-card-4">
+    <div class="w3-card-4 w3-mobile" style="max-width: 100%;">
         <header class="kepala w3-display-container w3-card-4 w3-center" style="height: 650px;">
             <div class="judul w3-display-middle">
                 <h3 class="w3-xxxlarge w3-alex">Selamat Datang</h3>
@@ -184,12 +240,12 @@
 
         <section class="isi w3-card-4 w3-row w3-mobile " style="height: auto;">
             <div class="satu w3-display-container w3-container w3-col s4 w3-mobile w3-card-2 " style="height: 1248px;">
-                <div class="w3-card-2 w3-display-middle" style="width: 80%;">
+                <div class="susunan w3-card-2 w3-display-middle" style="width: 80%;">
                     <h2 class="w3-bona-bold w3-text-nowrap w3-xxlarge">Susunan Acara</h2>
                     <p><span>08.00-09.00</span><br> Penyambutan tamu & Persiapan pengantin</p><hr class="garis">
                     <p><span>09.00-09.30</span><br> Akad nikah</p><hr class="garis">
                     <p><span>09.30-10.30</span><br> Penyiraman pengantin</p><hr class="garis">
-                    <p><span>10.30-Selesai</span><br>Acara resepsi</p>
+                    <p><span>10.30-Selesai</span><br> Acara resepsi</p>
                 </div>
             </div>
             <div class="w3-col s4 w3-mobile w3-card-2 galeri">
@@ -197,13 +253,13 @@
                 <img src="foto/gmbr2.jpg" alt="2" >
             </div>
             <div class="w3-container w3-col s4 w3-mobile w3-card-2 w3-display-container" style="height: 1248px;">
-                <div class="w3-display-middle" style="width: 90%; margin-left: 50px;">
-                    <div class="w3-card-4" style="width: 80%;">
+                <div class="calon w3-display-middle" style="width: 90%; margin-left: 50px;">
+                    <div class=" w3-card-4" style="width: 80%;">
                         <img src="foto/wanita.jfif" alt="mempelai wanita" style="width: 100%;">
                         <h3 class="w3-bona-bold">Sinta maharani</h3><hr class="garis">
                         <p class="w3-bona w3-padding w3-large">Anak Bapak Sholeh & Ibu Ratih</p>
                     </div>
-                    <div class="w3-card-4" style="width: 80%; margin-top: 70px;">
+                    <div class=" w3-card-4" style="width: 80%; margin-top: 70px;">
                         <img src="foto/pria.jfif" alt="mempelai pria" style="width: 100%;">
                         <h3 class="w3-bona-bold">Roni cahyano</h3><hr class="garis">
                         <p class="w3-bona w3-padding w3-large">Anak Bapak Jami & Ibu Kiki</p>
